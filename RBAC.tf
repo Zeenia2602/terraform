@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "confluent" {
-  cloud_api_key    = "NE4AVLBVTAY47XMI"
-  cloud_api_secret = "ObWryyUttLaKhWvC6ynyjm3z5mv9JuFd/6r6+F+MbU4KkrgogL49fxUAPXRfFQ38"
+  cloud_api_key    = var.confluent_cloud_api_key
+  cloud_api_secret = var.confluent_cloud_api_secret
 }
 
 resource "confluent_environment" "terraform_rbac" {
